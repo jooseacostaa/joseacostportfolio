@@ -12,21 +12,21 @@ const Hero = () => {
                     horizonColor="#050505"
                     waveColor="#181818"
                     crestColor="#FFFFFF"
-                    speed={0.28}
+                    speed={0.3}
                     amplitude={2.2}
-                    waveScale={0.55}
-                    waveRatio={2.4}
-                    swell={22}
+                    waveScale={0.6}
+                    waveRatio={2.5}
+                    swell={30}
                     turbulence={35}
                     tilt={1}
                     zoom={1.1}
-                    height={5.5}
-                    fogDepth={11}
+                    height={7}
+                    fogDepth={14}
                     detail="medium"
-                    brightness={0.65}
-                    opacity={0.85}
+                    brightness={0.35}
+                    opacity={1}
                     mouseInteraction
-                    parallaxStrength={0.45}
+                    parallaxStrength={0.35}
                     grain={false}
                 />
             </div>
