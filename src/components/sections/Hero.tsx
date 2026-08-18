@@ -63,7 +63,7 @@ const Hero = () => {
                 <div className=" italic flex gap-8 text-sm uppercase tracking-[0.12em]">
 
                     <a
-                        href="https://www.instagram.com/"
+                        href="https://www.instagram.com/jooseacostaa/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group pointer-events-auto relative inline-block"
@@ -73,7 +73,7 @@ const Hero = () => {
                     </a>
 
                     <a
-                        href="https://www.linkedin.com/"
+                        href="https://www.linkedin.com/in/jos%C3%A9-luis-acosta-naranjo-1119593b7/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group pointer-events-auto relative inline-block"
@@ -83,7 +83,7 @@ const Hero = () => {
                     </a>
 
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/jooseacostaa/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group pointer-events-auto relative inline-block"
