@@ -12,7 +12,7 @@ const Hero = () => {
                     horizonColor="#050505"
                     waveColor="#181818"
                     crestColor="#FFFFFF"
-                    speed={0.3}
+                    speed={0.25}
                     amplitude={2.2}
                     waveScale={0.6}
                     waveRatio={2.5}
@@ -21,7 +21,7 @@ const Hero = () => {
                     tilt={1}
                     zoom={1.1}
                     height={7}
-                    fogDepth={14}
+                    fogDepth={16}
                     detail="medium"
                     brightness={0.10}
                     opacity={1}
