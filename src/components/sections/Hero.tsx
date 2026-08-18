@@ -1,6 +1,6 @@
 "use client";
 
-import GradientWaves from "../ui/GradientWaves/GradientWaves";
+import GradientWaves from "@/components/ui/GradientWaves/GradientWaves";
 
 const Hero = () => {
     return (
@@ -43,7 +43,7 @@ const Hero = () => {
             </nav>
 
             {/* Main content */}
-            <div className="relative z-10 flex min-h-screen items-center justify-center -translate-y-[20vh]">
+            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
                 <h1 className="text-center font-serif text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
                     JOSÉ ACOSTA
                 </h1>
