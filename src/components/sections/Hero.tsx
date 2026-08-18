@@ -14,11 +14,9 @@ const Hero = () => {
             </nav>
 
             {/* Main content */}
-            <div className="flex min-h-screen items-center justify-center">
-                <h1 className="text-center font-serif text-[clamp(5rem,16vw,16rem)] leading-[0.75] tracking-[-0.06em]">
-                    JOSÉ
-                    <br />
-                    ACOSTA
+            <div className="flex min-h-screen items-center justify-center -translate-y-[20vh]">
+                <h1 className="text-center font-serif text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
+                    JOSÉ ACOSTA
                 </h1>
             </div>
 
