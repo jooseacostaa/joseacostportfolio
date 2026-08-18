@@ -44,8 +44,9 @@ const Hero = () => {
 
             {/* Main content */}
             <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-                <h1 className="text-center font-serif text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
-                    JOSÉ ACOSTA
+                <h1 className="font-instrument text-center text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
+                    <span>JOSÉ </span>
+                    <span className="italic">ACOSTA</span>
                 </h1>
             </div>
 
