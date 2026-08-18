@@ -36,10 +36,31 @@ const Hero = () => {
                 <span>José Acosta</span>
 
                 <div className="flex gap-6">
-                    <a href="#work">Work</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a
+                        href="#work"
+                        className="group relative inline-block"
+                    >
+                        Work
+                        <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
+                    </a>
+
+                    <a
+                        href="#about"
+                        className="group relative inline-block"
+                    >
+                        About
+                        <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
+                    </a>
+
+                    <a
+                        href="#contact"
+                        className="group relative inline-block"
+                    >
+                        Contact
+                        <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
+                    </a>
                 </div>
+
             </nav>
 
             {/* Main title */}
