@@ -23,7 +23,7 @@ const Hero = () => {
                     height={7}
                     fogDepth={14}
                     detail="medium"
-                    brightness={0.35}
+                    brightness={0.10}
                     opacity={1}
                     mouseInteraction
                     parallaxStrength={0.35}
@@ -43,50 +43,55 @@ const Hero = () => {
             </nav>
 
             {/* Main title */}
-            <div className="absolute inset-x-0 top-[23%] z-10 flex justify-center pointer-events-none">
-                <h1 className="font-instrument text-center text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
+            <div className="absolute inset-x-0 top-[25%] z-10 flex justify-center pointer-events-none">
+                <h1 className="font-instrument text-center text-[clamp(6rem,21vw,22rem)] font-normal leading-[0.75] tracking-[-0.05em]">
                     <span>JOSÉ </span>
                     <span className="italic">ACOSTA</span>
                 </h1>
             </div>
 
             {/* About + social links */}
-            <div className="absolute bottom-[15%] left-[10%] z-10 max-w-xl">
+            <div className="absolute bottom-[12%] left-[5%] z-10 max-w-xl">
 
-                <p className="mb-8 max-w-lg text-xl leading-[1.1] tracking-[-0.02em] md:text-2xl">
+                <p className="font-instrument mb-8 max-w-xl text-2xl leading-[1.1] tracking-[-0.02em] md:text-3xl">
                     Hi, I'm José, a software developer based in Spain. I build digital
                     experiences through code, design, and interaction, bringing together
                     a passion for technology, a strong eye for detail, and a curiosity
                     for experimenting with new ideas.
                 </p>
 
-                <div className="flex gap-8 text-sm uppercase tracking-[0.12em]">
+                <div className=" italic flex gap-8 text-sm uppercase tracking-[0.12em]">
+
                     <a
                         href="https://www.instagram.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                        className="group pointer-events-auto relative inline-block"
                     >
                         Instagram
+                        <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
 
                     <a
                         href="https://www.linkedin.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                        className="group pointer-events-auto relative inline-block"
                     >
                         LinkedIn
+                        <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
 
                     <a
                         href="https://github.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                        className="group pointer-events-auto relative inline-block"
                     >
                         GitHub
+                        <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
+
                 </div>
 
             </div>
