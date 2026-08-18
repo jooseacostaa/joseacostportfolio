@@ -42,23 +42,59 @@ const Hero = () => {
                 </div>
             </nav>
 
-            {/* Main content */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+            {/* Main title */}
+            <div className="absolute inset-x-0 top-[23%] z-10 flex justify-center pointer-events-none">
                 <h1 className="font-instrument text-center text-[clamp(5rem,16vw,16rem)] font-normal leading-[0.75] tracking-[-0.07em]">
                     <span>JOSÉ </span>
                     <span className="italic">ACOSTA</span>
                 </h1>
             </div>
 
-            {/* Bottom information */}
-            <div className="absolute bottom-6 left-6 right-6 z-10 flex items-end justify-between text-[11px] uppercase tracking-[0.12em] md:bottom-8 md:left-8 md:right-8">
-                <div>
-                    <p>Software Developer</p>
-                    <p>Spain · 2026</p>
+            {/* About + social links */}
+            <div className="absolute bottom-[15%] left-[10%] z-10 max-w-xl">
+
+                <p className="mb-8 max-w-lg text-xl leading-[1.1] tracking-[-0.02em] md:text-2xl">
+                    Hi, I'm José, a software developer based in Spain. I build digital
+                    experiences through code, design, and interaction, bringing together
+                    a passion for technology, a strong eye for detail, and a curiosity
+                    for experimenting with new ideas.
+                </p>
+
+                <div className="flex gap-8 text-sm uppercase tracking-[0.12em]">
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pointer-events-auto transition-opacity hover:opacity-60"
+                    >
+                        GitHub
+                    </a>
                 </div>
 
-                <span>Scroll ↓</span>
             </div>
+
+            {/* Scroll */}
+            <span className="absolute bottom-6 right-6 z-10 text-[11px] uppercase tracking-[0.12em] md:bottom-8 md:right-8">
+                Scroll ↓
+            </span>
 
         </section>
     );
