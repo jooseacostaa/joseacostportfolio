@@ -52,7 +52,7 @@ const Projects = () => {
                         href={`/projects/${project.slug}`}
                         onMouseEnter={() => setActiveProject(project.slug)}
                         onMouseLeave={() => setActiveProject(null)}
-                        className="group block border-t border-black/20 py-8"
+                        className="group block border-t border-black/15 py-10 transition-opacity duration-300 hover:opacity-70"
                     >
                         <div className="grid grid-cols-[40px_1fr_auto] items-start gap-6 md:grid-cols-[60px_1fr_200px_auto]">
 
@@ -61,7 +61,7 @@ const Projects = () => {
                             </span>
 
                             <div>
-                                <h3 className="font-instrument text-4xl leading-none tracking-[-0.03em] transition-transform duration-300 group-hover:translate-x-2 md:text-6xl">
+                                <h3 className="font-instrument text-4xl leading-none tracking-[-0.03em] transition-transform duration-500 ease-out group-hover:translate-x-3 md:text-6xl">
                                     {project.title}
                                 </h3>
 
