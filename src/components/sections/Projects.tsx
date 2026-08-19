@@ -1,14 +1,17 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import Link from "next/link";
 
 import { projects } from "@/data/projects";
-import ProjectPreview from "@/components/ui/ProjectPreview";
+import ProjectPreview, { ProjectPreviewHandle, } from "@/components/ui/ProjectPreview";
+
+import { useRef, useState } from "react";
 
 const Projects = () => {
     const router = useRouter();
+
+    const previewRef = useRef<ProjectPreviewHandle>(null);
 
     const [activeProject, setActiveProject] = useState<string | null>(null);
 
@@ -30,11 +33,18 @@ const Projects = () => {
         });
     };
 
-    const handleProjectClick = (
+    const handleProjectClick = async (
         event: React.MouseEvent<HTMLAnchorElement>,
         slug: string
     ) => {
         event.preventDefault();
+
+        if (!previewRef.current) {
+            router.push(`/projects/${slug}`);
+            return;
+        }
+
+        await previewRef.current.expand();
 
         router.push(`/projects/${slug}`);
     };
@@ -104,6 +114,7 @@ const Projects = () => {
             {/* Floating preview */}
             {activeProjectData && (
                 <ProjectPreview
+                    ref={previewRef}
                     image={activeProjectData.image}
                     visible={Boolean(activeProject)}
                     x={mousePosition.x}
