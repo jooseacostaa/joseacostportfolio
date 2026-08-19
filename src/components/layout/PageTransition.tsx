@@ -88,7 +88,7 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
         const overlay = overlayRef.current;
         const fade = gsap.to(overlay, {
             opacity: 0,
-            duration: 1.2,
+            duration: 1,
             delay: 0.1,
             ease: "power2.inOut",
             onComplete: () => setTransition(null),
