@@ -22,7 +22,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
     }
 
     return (
-        <main className="bg-[#f7f6f2]">
+        <main className="bg-[#f5f5f0] text-[#050505]">
 
             {/* Hero image */}
             <section className="relative h-[100dvh] w-full overflow-hidden">
@@ -34,13 +34,16 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                     sizes="100vw"
                     className="object-cover"
                 />
+
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-black/10" />
             </section>
 
             {/* Project information */}
             <section className="px-6 py-24 md:px-8 md:py-40">
 
                 {/* Header */}
-                <div className="mb-20 flex items-start justify-between text-[11px] uppercase tracking-[0.12em]">
+                <div className="mb-24 flex items-center justify-between text-[11px] uppercase tracking-[0.12em]">
                     <span>
                         {project.number} · {project.year}
                     </span>
@@ -56,14 +59,14 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                 </div>
 
                 {/* Title */}
-                <div className="mb-24">
-                    <h1 className="italic text-[clamp(5rem,14vw,14rem)] leading-[0.75] tracking-[-0.05em]">
+                <div className="mb-32">
+                    <h1 className="font-instrument text-[clamp(6rem,16vw,18rem)] font-normal leading-[0.72] tracking-[-0.06em]">
                         {project.title}
                     </h1>
                 </div>
 
                 {/* Information */}
-                <div className="grid gap-16 md:grid-cols-2">
+                <div className="grid gap-24 md:grid-cols-[1.5fr_1fr] md:gap-16">
 
                     {/* Description */}
                     <div>
@@ -71,7 +74,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             About
                         </span>
 
-                        <p className="font-instrument mt-8 max-w-xl text-3xl leading-[1.05] tracking-[-0.02em] md:text-5xl">
+                        <p className="font-instrument mt-8 max-w-3xl text-3xl leading-[1.05] tracking-[-0.025em] md:text-5xl lg:text-4xl">
                             {project.description}
                         </p>
                     </div>
@@ -83,7 +86,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             Technologies
                         </span>
 
-                        <p className="mt-8 max-w-sm text-[11px] uppercase leading-relaxed tracking-[0.12em]">
+                        <p className="mt-8 max-w-sm text-sm uppercase leading-relaxed tracking-[0.12em]">
                             {project.technologies}
                         </p>
 
@@ -92,7 +95,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative mt-10 inline-block text-[11px] uppercase tracking-[0.12em]"
+                                className="group relative mt-10 inline-block text-sm uppercase tracking-[0.12em]"
                             >
                                 Visit website ↗
 
