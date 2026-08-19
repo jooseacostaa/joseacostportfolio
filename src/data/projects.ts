@@ -1,0 +1,31 @@
+export const projects = [
+    {
+        number: "01",
+        title: "Web7 Devs",
+        slug: "web7-devs",
+        description: "Personal portfolio",
+        year: "2026",
+        technologies: "Next.js · TypeScript · GSAP",
+        image: "/projects/web7.png",
+        url: "https://web7devs.com/",
+    },
+    {
+        number: "02",
+        title: "Good Meals",
+        slug: "good-meals",
+        description: "Web application",
+        year: "2026",
+        technologies: "React · TypeScript",
+        image: "/projects/goodmeals.png",
+        url: "https://goodmeals.es/",
+    },
+    {
+        number: "03",
+        title: "BananaIsland Gallery",
+        slug: "bananaisland-gallery",
+        description: "Full-stack application",
+        year: "2025",
+        technologies: "Java · Spring Boot · MySQL",
+        image: "/projects/bananaisland.png",
+    },
+];
