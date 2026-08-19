@@ -17,7 +17,7 @@ interface ProjectPreviewProps {
 }
 
 export interface ProjectPreviewHandle {
-    expand: () => Promise<void>;
+    getBounds: () => DOMRect | null;
 }
 
 const ProjectPreview = forwardRef<
@@ -30,26 +30,7 @@ const ProjectPreview = forwardRef<
     const currentY = useRef(0);
 
     useImperativeHandle(ref, () => ({
-        expand: () => {
-            return new Promise((resolve) => {
-                if (!previewRef.current) {
-                    resolve();
-                    return;
-                }
-
-                gsap.to(previewRef.current, {
-                    x: window.innerWidth / 2,
-                    y: window.innerHeight / 2,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                    scale: 1,
-                    rotate: 0,
-                    duration: 0.8,
-                    ease: "power4.inOut",
-                    onComplete: resolve,
-                });
-            });
-        },
+        getBounds: () => previewRef.current?.getBoundingClientRect() ?? null,
     }));
 
     useEffect(() => {

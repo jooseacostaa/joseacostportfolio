@@ -5,11 +5,13 @@ import Link from "next/link";
 
 import { projects } from "@/data/projects";
 import ProjectPreview, { ProjectPreviewHandle, } from "@/components/ui/ProjectPreview";
+import { usePageTransition } from "@/components/layout/PageTransition";
 
 import { useRef, useState } from "react";
 
 const Projects = () => {
     const router = useRouter();
+    const { startProjectTransition } = usePageTransition();
 
     const previewRef = useRef<ProjectPreviewHandle>(null);
 
@@ -33,20 +35,30 @@ const Projects = () => {
         });
     };
 
-    const handleProjectClick = async (
+    const handleProjectClick = (
         event: React.MouseEvent<HTMLAnchorElement>,
         slug: string
     ) => {
         event.preventDefault();
 
-        if (!previewRef.current) {
+        const project = projects.find((item) => item.slug === slug);
+        const bounds = previewRef.current?.getBounds();
+
+        if (!project || !bounds) {
             router.push(`/projects/${slug}`);
             return;
         }
 
-        await previewRef.current.expand();
-
-        router.push(`/projects/${slug}`);
+        startProjectTransition({
+            href: `/projects/${slug}`,
+            image: project.image,
+            origin: {
+                left: bounds.left,
+                top: bounds.top,
+                width: bounds.width,
+                height: bounds.height,
+            },
+        });
     };
 
     return (
