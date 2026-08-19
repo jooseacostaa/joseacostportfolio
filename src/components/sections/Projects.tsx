@@ -1,6 +1,31 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
 import { projects } from "@/data/projects";
+import ProjectPreview from "@/components/ui/ProjectPreview";
 
 const Projects = () => {
+    const [activeProject, setActiveProject] = useState<string | null>(null);
+    const [mousePosition, setMousePosition] = useState({
+        x: 0,
+        y: 0,
+    });
+
+    const activeProjectData = projects.find(
+        (project) => project.slug === activeProject
+    );
+
+    const handleMouseMove = (
+        event: React.MouseEvent<HTMLDivElement>
+    ) => {
+        setMousePosition({
+            x: event.clientX + 30,
+            y: event.clientY + 30,
+        });
+    };
+
     return (
         <section
             id="work"
@@ -18,11 +43,16 @@ const Projects = () => {
             </div>
 
             {/* Projects */}
-            <div>
+            <div
+                onMouseMove={handleMouseMove}
+            >
                 {projects.map((project) => (
-                    <article
-                        key={project.number}
-                        className="group border-t border-black/20 py-8"
+                    <Link
+                        key={project.slug}
+                        href={`/projects/${project.slug}`}
+                        onMouseEnter={() => setActiveProject(project.slug)}
+                        onMouseLeave={() => setActiveProject(null)}
+                        className="group block border-t border-black/20 py-8"
                     >
                         <div className="grid grid-cols-[40px_1fr_auto] items-start gap-6 md:grid-cols-[60px_1fr_200px_auto]">
 
@@ -47,10 +77,21 @@ const Projects = () => {
                             <span className="text-xs uppercase tracking-[0.1em]">
                                 {project.year}
                             </span>
+
                         </div>
-                    </article>
+                    </Link>
                 ))}
             </div>
+
+            {/* Floating preview */}
+            {activeProjectData && (
+                <ProjectPreview
+                    image={activeProjectData.image}
+                    visible={Boolean(activeProject)}
+                    x={mousePosition.x}
+                    y={mousePosition.y}
+                />
+            )}
         </section>
     );
 };
