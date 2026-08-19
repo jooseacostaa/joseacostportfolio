@@ -52,11 +52,11 @@ const Projects = () => {
     return (
         <section
             id="work"
-            className="min-h-screen px-6 py-24 md:px-8 md:py-32"
+            className="min-h-screen px-6 py-24 md:px-8 md:py-20"
         >
             {/* Header */}
             <div className="mb-20 flex items-end justify-between">
-                <h2 className="font-instrument text-6xl tracking-[-0.04em] md:text-8xl">
+                <h2 className="font-instrument text-6xl tracking-[-0.04em] md:text-9xl">
                     Work
                 </h2>
 
@@ -89,7 +89,7 @@ const Projects = () => {
                             </span>
 
                             <div>
-                                <h3 className="font-instrument text-4xl leading-none tracking-[-0.03em] transition-transform duration-500 ease-out group-hover:translate-x-3 md:text-6xl">
+                                <h3 className="italic text-4xl leading-none tracking-[-0.03em] transition-transform duration-500 ease-out group-hover:translate-x-3 md:text-6xl">
                                     {project.title}
                                 </h3>
 

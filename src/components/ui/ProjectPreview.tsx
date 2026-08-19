@@ -58,7 +58,7 @@ const ProjectPreview = forwardRef<
         if (visible) {
             gsap.to(previewRef.current, {
                 opacity: 1,
-                scale: 1,
+                scale: 1.7,
                 rotate: 0,
                 duration: 0.45,
                 ease: "power3.out",
