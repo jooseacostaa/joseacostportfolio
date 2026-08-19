@@ -25,8 +25,8 @@ const ProjectPreview = ({
         if (visible) {
             gsap.to(previewRef.current, {
                 opacity: 1,
-                scale: 3,
-                duration: 0.35,
+                scale: 2.8,
+                duration: 0.5,
                 ease: "power3.out",
             });
         } else {
