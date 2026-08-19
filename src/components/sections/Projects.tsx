@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -7,7 +8,10 @@ import { projects } from "@/data/projects";
 import ProjectPreview from "@/components/ui/ProjectPreview";
 
 const Projects = () => {
+    const router = useRouter();
+
     const [activeProject, setActiveProject] = useState<string | null>(null);
+
     const [mousePosition, setMousePosition] = useState({
         x: 0,
         y: 0,
@@ -24,6 +28,15 @@ const Projects = () => {
             x: event.clientX + 30,
             y: event.clientY + 30,
         });
+    };
+
+    const handleProjectClick = (
+        event: React.MouseEvent<HTMLAnchorElement>,
+        slug: string
+    ) => {
+        event.preventDefault();
+
+        router.push(`/projects/${slug}`);
     };
 
     return (
@@ -43,15 +56,20 @@ const Projects = () => {
             </div>
 
             {/* Projects */}
-            <div
-                onMouseMove={handleMouseMove}
-            >
+            <div onMouseMove={handleMouseMove}>
                 {projects.map((project) => (
                     <Link
                         key={project.slug}
                         href={`/projects/${project.slug}`}
-                        onMouseEnter={() => setActiveProject(project.slug)}
-                        onMouseLeave={() => setActiveProject(null)}
+                        onMouseEnter={() =>
+                            setActiveProject(project.slug)
+                        }
+                        onMouseLeave={() =>
+                            setActiveProject(null)
+                        }
+                        onClick={(event) =>
+                            handleProjectClick(event, project.slug)
+                        }
                         className="group block border-t border-black/15 py-10 transition-opacity duration-300 hover:opacity-70"
                     >
                         <div className="grid grid-cols-[40px_1fr_auto] items-start gap-6 md:grid-cols-[60px_1fr_200px_auto]">

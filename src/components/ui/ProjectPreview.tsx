@@ -28,7 +28,7 @@ const ProjectPreview = ({
         if (visible) {
             gsap.to(previewRef.current, {
                 opacity: 1,
-                scale: 2.3,
+                scale: 2,
                 rotate: 0,
                 duration: 0.5,
                 ease: "power3.out",
@@ -70,6 +70,7 @@ const ProjectPreview = ({
     return (
         <div
             ref={previewRef}
+            id="project-preview"
             className="pointer-events-none fixed left-0 top-0 z-50 hidden w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:block"
         >
             <div className="relative aspect-[4/3] overflow-hidden">

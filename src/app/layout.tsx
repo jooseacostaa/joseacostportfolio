@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+
 import "./globals.css";
+
+import PageTransition from "@/components/layout/PageTransition";
 
 export const metadata: Metadata = {
     title: "José Acosta — Software Developer",
@@ -13,7 +16,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es">
-            <body>{children}</body>
+            <body>
+                <PageTransition />
+                {children}
+            </body>
         </html>
     );
 }
