@@ -28,4 +28,13 @@ export const projects = [
         technologies: "Java · Spring Boot · MySQL",
         image: "/projects/bananaisland.png",
     },
+    {
+        number: "04",
+        title: "Warehouse Management System",
+        slug: "warehouse-management-system",
+        description: "Full-stack application",
+        year: "2026",
+        technologies: "Java · Spring Boot · MySQL",
+        image: "/projects/managementsys.png",
+    },
 ];
