@@ -168,7 +168,7 @@ const About = () => {
                 </h2>
 
                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                    About me
+                    Contact me
                 </span>
             </div>
 
