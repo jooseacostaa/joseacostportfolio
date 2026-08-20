@@ -1,6 +1,11 @@
 "use client";
 
+import { useState } from "react";
+import SkillsPanel from "./SkillsPanel";
+
 const About = () => {
+    const [skillsOpen, setSkillsOpen] = useState(false);
+
     return (
         <section
             id="about"
@@ -86,6 +91,7 @@ const About = () => {
 
                     <button
                         type="button"
+                        onClick={() => setSkillsOpen(true)}
                         className="mt-2 flex h-24 items-center justify-between bg-black px-6 text-[11px] uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-transparent hover:text-black"
                     >
                         <span>Skills</span>
@@ -94,6 +100,13 @@ const About = () => {
 
                 </div>
             </div>
+
+            {/* Skills Panel */}
+            <SkillsPanel
+                open={skillsOpen}
+                onClose={() => setSkillsOpen(false)}
+            />
+
         </section>
     );
 };
