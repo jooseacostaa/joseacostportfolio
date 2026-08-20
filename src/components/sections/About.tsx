@@ -106,7 +106,6 @@ const About = () => {
                 open={skillsOpen}
                 onClose={() => setSkillsOpen(false)}
             />
-
         </section>
     );
 };
