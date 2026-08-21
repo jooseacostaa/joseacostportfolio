@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# José Acosta — Portfolio
+
+Personal portfolio website showcasing my work, projects, and skills as a software developer.
+
+Built with a focus on minimalism, typography, motion, and interactive digital experiences.
+
+## About
+
+I'm José, a software developer based in Spain, interested in the space where technology meets creativity.
+
+This portfolio brings together some of my academic, personal, and client projects, covering both frontend and backend development.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP
+- OGL
+- HTML
+- CSS
+
+## Features
+
+- Responsive design
+- Custom typography with Instrument Serif
+- Animated hero section
+- Interactive WebGL background using OGL
+- GSAP animations and scroll interactions
+- Project showcase with dynamic project pages
+- Responsive project layouts
+- Custom hover interactions
+- Optimized images using Next.js Image
+- Dynamic routing for project pages
+
+## Projects
+
+### Web7 Devs
+
+A collaborative web studio focused on turning ideas into modern, thoughtful, and functional digital experiences.
+
+### Good Meals
+
+A custom website built for a healthy meal delivery business, designed to showcase its offer and make ordering simple and accessible.
+
+### BananaIsland Gallery
+
+A digital art gallery built as an academic project, combining a curated collection of artworks with a full-stack application developed from scratch.
+
+### Warehouse Management System
+
+A management platform for stores, warehouses, and products, built around relational data and the day-to-day organization of inventory.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    git clone https://github.com/jooseacostaa/joseacostportfolio.git
+    cd joseacostportfolio
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install the dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the development server:
 
-## Learn More
+    npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+Open http://localhost:3000 in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    src/
+    ├── app/
+    ├── components/
+    │   ├── layout/
+    │   ├── sections/
+    │   └── ui/
+    ├── data/
+    └── ...
 
-## Deploy on Vercel
+    public/
+    ├── fonts/
+    ├── projects/
+    └── ...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Typography
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The portfolio uses Instrument Serif as its main display typeface, combined with a clean sans-serif typeface for smaller UI elements and metadata.
+
+## Animation
+
+Animations are built with GSAP and ScrollTrigger, while the hero background uses a custom WebGL implementation powered by OGL.
+
+The hero includes:
+
+- Intro animation for the main title
+- Scroll-based title movement and fading
+- Scroll-based About section animation
+- Interactive mouse parallax
+- Animated WebGL waves
+
+## Development
+
+This project uses the Next.js App Router and TypeScript.
+
+To create a production build:
+
+    npm run build
+
+To start the production server:
+
+    npm start
+
+## Contact
+
+- GitHub: https://github.com/jooseacostaa
+- LinkedIn: https://www.linkedin.com/in/jos%C3%A9-luis-acosta-naranjo-1119593b7/
+- Instagram: https://www.instagram.com/jooseacostaa/
+
+---
+
+© 2026 José Acosta
