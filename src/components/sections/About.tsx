@@ -183,10 +183,10 @@ const About = () => {
                     className="flex flex-col justify-between"
                 >
                     <p className="font-instrument max-w-4xl text-4xl leading-[0.95] tracking-[-0.035em] md:text-6xl">
-                        I'm José, a software developer based in Spain. I
-                        build digital experiences through code, design and
-                        interaction, bringing together technology, curiosity
-                        and attention to detail.
+                        I’m interested in the space where technology meets creativity. I enjoy
+                        taking ideas apart, understanding how they work, and rebuilding them
+                        into something simple, thoughtful and alive. I’m always curious about
+                        what can be done next.
                     </p>
 
                     <div className="mt-16 flex gap-16 md:mt-24">
@@ -196,7 +196,7 @@ const About = () => {
                             </span>
 
                             <p className="text-xs uppercase tracking-[0.08em]">
-                                Spain
+                                Canary Islands, Spain
                             </p>
                         </div>
 
