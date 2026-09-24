@@ -2,6 +2,8 @@
 
 Personal portfolio website showcasing my work, projects, and skills as a software developer.
 
+**Live website:** [joseacostportfolio.vercel.app](https://joseacostportfolio.vercel.app/)
+
 Built with a focus on minimalism, typography, motion, and interactive digital experiences.
 
 ## About
@@ -56,34 +58,42 @@ A management platform for stores, warehouses, and products, built around relatio
 
 Clone the repository:
 
-    git clone https://github.com/jooseacostaa/joseacostportfolio.git
-    cd joseacostportfolio
+```bash
+git clone https://github.com/jooseacostaa/joseacostportfolio.git
+cd joseacostportfolio
+```
 
 Install the dependencies:
 
-    npm install
+```bash
+npm install
+```
 
 Run the development server:
 
-    npm run dev
+```bash
+npm run dev
+```
 
-Open http://localhost:3000 in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-    src/
-    ├── app/
-    ├── components/
-    │   ├── layout/
-    │   ├── sections/
-    │   └── ui/
-    ├── data/
-    └── ...
+```kotlin
+src/
+├── app/
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+├── data/
+└── ...
 
-    public/
-    ├── fonts/
-    ├── projects/
-    └── ...
+public/
+├── fonts/
+├── projects/
+└── ...
+```
 
 ## Typography
 
@@ -107,17 +117,21 @@ This project uses the Next.js App Router and TypeScript.
 
 To create a production build:
 
-    npm run build
+```bash
+npm run build
+```
 
 To start the production server:
 
-    npm start
+```bash
+npm start
+```
 
 ## Contact
 
-- GitHub: https://github.com/jooseacostaa
-- LinkedIn: https://www.linkedin.com/in/jos%C3%A9-luis-acosta-naranjo-1119593b7/
-- Instagram: https://www.instagram.com/jooseacostaa/
+- GitHub: [https://github.com/jooseacostaa](https://github.com/jooseacostaa)
+- LinkedIn: [https://www.linkedin.com/in/jos%C3%A9-luis-acosta-naranjo-1119593b7/](https://www.linkedin.com/in/jos%C3%A9-luis-acosta-naranjo-1119593b7/)
+- Instagram: [https://www.instagram.com/jooseacostaa/](https://www.instagram.com/jooseacostaa/)
 
 ---
 
