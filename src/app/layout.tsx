@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Analytics } from "@vercel/analytics/next";
 import PageTransition from "@/components/layout/PageTransition";
 
 import "./globals.css";
@@ -18,6 +19,7 @@ export default function RootLayout({
         <html lang="es">
             <body>
                 <PageTransition>{children}</PageTransition>
+                <Analytics />
             </body>
         </html>
     );
