@@ -1,0 +1,42 @@
+import type en from "./en";
+
+const es = {
+    "nav.work": "Proyectos",
+    "nav.about": "Sobre mí",
+    "nav.contact": "Contacto",
+    "hero.intro": "Hola, soy José, desarrollador de software en España. Creo experiencias digitales a través del código, el diseño y la interacción, combinando mi pasión por la tecnología, la atención al detalle y la curiosidad por experimentar con nuevas ideas.",
+    "hero.scroll": "Desliza ↓",
+    "about.contact": "Hablemos",
+    "about.intro": "Me interesa el punto de encuentro entre la tecnología y la creatividad. Disfruto descomponiendo ideas, entendiendo cómo funcionan y reconstruyéndolas para crear algo sencillo, cuidado y con vida. Siempre tengo curiosidad por descubrir qué más se puede hacer.",
+    "about.locationLabel": "Ubicación",
+    "about.location": "Islas Canarias, España",
+    "about.roleLabel": "Perfil",
+    "about.role": "Desarrollador de software",
+    "contact.email": "Escríbeme",
+    "contact.phone": "Llámame",
+    "skills.title": "Habilidades",
+    "work.subtitle": "Proyectos seleccionados",
+    "skills.close": "Cerrar",
+    "skills.development": "Desarrollo",
+    "skills.databases": "Bases de datos",
+    "skills.tools": "Herramientas",
+    "footer.backToTop": "Volver arriba ↑",
+    "project.back": "Volver a proyectos",
+    "project.about": "Sobre el proyecto",
+    "project.technologies": "Tecnologías",
+    "project.website": "Sitio web",
+    "project.visit": "Visitar sitio web ↗",
+    "language.switch": "Cambiar a español",
+    "skills.closeLabel": "Cerrar panel de habilidades",
+    "skills.listLabel": "Lista de habilidades",
+    "projects.web7-devs.title": "Web7 Devs",
+    "projects.web7-devs.description": "Un estudio web colaborativo que transforma ideas en experiencias digitales modernas, cuidadas y funcionales.",
+    "projects.good-meals.title": "Good Meals",
+    "projects.good-meals.description": "Una web a medida para un negocio de comida saludable a domicilio, diseñada para presentar su oferta y facilitar los pedidos.",
+    "projects.bananaisland-gallery.title": "BananaIsland Gallery",
+    "projects.bananaisland-gallery.description": "Una galería de arte digital creada como proyecto académico, que combina una colección de obras seleccionadas con una aplicación full-stack desarrollada desde cero.",
+    "projects.warehouse-management-system.title": "Sistema de gestión de almacenes",
+    "projects.warehouse-management-system.description": "Un sistema de gestión para organizar tiendas, productos e inventario mediante una base de datos estructurada y un modelo de datos relacional."
+} satisfies Record<keyof typeof en, string>;
+
+export default es;

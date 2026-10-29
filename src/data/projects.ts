@@ -1,11 +1,22 @@
-export const projects = [
+import type { TranslationKey } from "@/i18n";
+
+interface Project {
+    number: string;
+    titleKey: TranslationKey;
+    slug: string;
+    descriptionKey: TranslationKey;
+    year: string;
+    technologies: string;
+    image: string;
+    url?: string;
+}
+
+export const projects: Project[] = [
     {
         number: "01",
-        title: "Web7 Devs",
+        titleKey: "projects.web7-devs.title",
         slug: "web7-devs",
-        description: "A collaborative web studio focused on turning ideas into modern, thoughtful, and functional digital experiences.",
-        titleEs: "Web7 Devs",
-        descriptionEs: "Un estudio web colaborativo que transforma ideas en experiencias digitales modernas, cuidadas y funcionales.",
+        descriptionKey: "projects.web7-devs.description",
         year: "2026",
         technologies: "Next.js · TypeScript · GSAP",
         image: "/projects/web7.png",
@@ -13,11 +24,9 @@ export const projects = [
     },
     {
         number: "02",
-        title: "Good Meals",
+        titleKey: "projects.good-meals.title",
         slug: "good-meals",
-        description: "A custom website built for a healthy meal delivery business, designed to showcase its offer and make ordering simple and accessible.",
-        titleEs: "Good Meals",
-        descriptionEs: "Una web a medida para un negocio de comida saludable a domicilio, diseñada para presentar su oferta y facilitar los pedidos.",
+        descriptionKey: "projects.good-meals.description",
         year: "2026",
         technologies: "Next.js · TypeScript · GSAP",
         image: "/projects/goodmeals.png",
@@ -25,22 +34,18 @@ export const projects = [
     },
     {
         number: "03",
-        title: "BananaIsland Gallery",
+        titleKey: "projects.bananaisland-gallery.title",
         slug: "bananaisland-gallery",
-        description: "A digital art gallery built as an academic project, combining a curated collection of artworks with a full-stack application developed from scratch.",
-        titleEs: "BananaIsland Gallery",
-        descriptionEs: "Una galería de arte digital creada como proyecto académico, que combina una colección de obras seleccionadas con una aplicación full-stack desarrollada desde cero.",
+        descriptionKey: "projects.bananaisland-gallery.description",
         year: "2025",
         technologies: "React · Java Script · HTML · CSS",
         image: "/projects/bananaisland.png",
     },
     {
         number: "04",
-        title: "Warehouse Management System",
+        titleKey: "projects.warehouse-management-system.title",
         slug: "warehouse-management-system",
-        description: "A warehouse management system for organizing stores, products, and inventory through a structured database and relational data model.",
-        titleEs: "Sistema de gestión de almacenes",
-        descriptionEs: "Un sistema de gestión para organizar tiendas, productos e inventario mediante una base de datos estructurada y un modelo de datos relacional.",
+        descriptionKey: "projects.warehouse-management-system.description",
         year: "2026",
         technologies: "Laravel · PHP · Blade · SCSS · MySQL",
         image: "/projects/managementsys.png",

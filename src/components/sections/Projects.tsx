@@ -2,7 +2,6 @@
 
 import { LocalizedText } from "@/components/layout/LanguageProvider";
 
-
 import { useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -37,14 +36,7 @@ const Projects = () => {
         null
     );
 
-    const [mousePosition, setMousePosition] = useState({
-        x: 0,
-        y: 0,
-    });
-
-    const activeProjectData = projects.find(
-        (project) => project.slug === activeProject
-    );
+    const [previewImage, setPreviewImage] = useState(projects[0].image);
 
     /*
      * Work animations
@@ -157,10 +149,7 @@ const Projects = () => {
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement>
     ) => {
-        setMousePosition({
-            x: event.clientX + 30,
-            y: event.clientY + 30,
-        });
+        previewRef.current?.moveTo(event.clientX + 30, event.clientY + 30);
     };
 
     /*
@@ -220,11 +209,11 @@ const Projects = () => {
                 className="mb-20 flex items-end justify-between"
             >
                 <h2 className="font-instrument text-6xl tracking-[-0.04em] md:text-9xl">
-                    <LocalizedText en="Work" es="Proyectos" />
+                    <LocalizedText id="nav.work" />
                 </h2>
 
                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                    <LocalizedText en="Selected projects" es="Proyectos seleccionados" />
+                    <LocalizedText id="work.subtitle" />
                 </span>
             </div>
 
@@ -237,9 +226,11 @@ const Projects = () => {
                     <Link
                         key={project.slug}
                         href={`/projects/${project.slug}`}
-                        onMouseEnter={() =>
-                            setActiveProject(project.slug)
-                        }
+                        onMouseEnter={(event) => {
+                            previewRef.current?.moveTo(event.clientX + 30, event.clientY + 30);
+                            setPreviewImage(project.image);
+                            setActiveProject(project.slug);
+                        }}
                         onMouseLeave={() =>
                             setActiveProject(null)
                         }
@@ -261,7 +252,7 @@ const Projects = () => {
                             {/* Project information */}
                             <div>
                                 <h3 className="italic text-4xl leading-none tracking-[-0.03em] transition-transform duration-500 ease-out group-hover:translate-x-3 md:text-6xl">
-                                    <LocalizedText en={project.title} es={project.titleEs} />
+                                    <LocalizedText id={project.titleKey} />
                                 </h3>
 
                                 <p className="mt-3 text-xs uppercase tracking-[0.1em]">
@@ -271,7 +262,7 @@ const Projects = () => {
 
                             {/* Description */}
                             <span className="hidden text-xs uppercase tracking-[0.1em] md:block">
-                                <LocalizedText en={project.description} es={project.descriptionEs} />
+                                <LocalizedText id={project.descriptionKey} />
                             </span>
 
                             {/* Year */}
@@ -284,15 +275,11 @@ const Projects = () => {
             </div>
 
             {/* Floating preview */}
-            {activeProjectData && (
-                <ProjectPreview
-                    ref={previewRef}
-                    image={activeProjectData.image}
-                    visible={Boolean(activeProject)}
-                    x={mousePosition.x}
-                    y={mousePosition.y}
-                />
-            )}
+            <ProjectPreview
+                ref={previewRef}
+                image={previewImage}
+                visible={activeProject !== null}
+            />
         </section>
     );
 };

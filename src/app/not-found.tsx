@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import GradientWaves from "@/components/ui/GradientWaves/GradientWaves";
+import PortfolioBackground from "@/components/ui/PortfolioBackground";
 
 export const metadata: Metadata = {
     title: "Page not found — José Acosta",
@@ -10,29 +10,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
     return (
         <main className="relative isolate flex min-h-dvh flex-col overflow-hidden px-6 py-6 md:px-8 md:py-8">
-            <div aria-hidden="true" className="absolute inset-0 z-0">
-                <GradientWaves
-                    horizonColor="#050505"
-                    waveColor="#181818"
-                    crestColor="#FFFFFF"
-                    speed={0.25}
-                    amplitude={2.2}
-                    waveScale={0.6}
-                    waveRatio={2.5}
-                    swell={30}
-                    turbulence={35}
-                    tilt={1}
-                    zoom={1.1}
-                    height={7}
-                    fogDepth={16}
-                    detail="medium"
-                    brightness={0.1}
-                    opacity={1}
-                    mouseInteraction
-                    parallaxStrength={0.35}
-                    grain={false}
-                />
-            </div>
+            <PortfolioBackground />
 
             <header className="relative z-10 flex items-center justify-between gap-6 text-[11px] uppercase tracking-[0.12em]">
                 <Link

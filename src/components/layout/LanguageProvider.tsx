@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-type Language = "en" | "es";
+import { dictionaries, type Language, type TranslationKey } from "@/i18n";
 const storageKey = "portfolio-language";
 const changeEvent = "portfolio-language-change";
 let memoryLanguage: Language | undefined;
@@ -61,8 +61,12 @@ export function useLanguage() {
     return useContext(LanguageContext);
 }
 
-export function LocalizedText({ en, es }: { en: string; es: string }) {
-    return useLanguage() === "es" ? es : en;
+export function useTranslations() {
+    return dictionaries[useLanguage()];
+}
+
+export function LocalizedText({ id }: { id: TranslationKey }) {
+    return useTranslations()[id];
 }
 
 export function LanguageSwitch() {
@@ -74,7 +78,7 @@ export function LanguageSwitch() {
             type="button"
             onClick={() => setLanguage(nextLanguage)}
             lang={nextLanguage}
-            aria-label={language === "en" ? "Cambiar a español" : "Switch to English"}
+            aria-label={dictionaries[nextLanguage]["language.switch"]}
             className="inline-flex min-h-10 min-w-10 shrink-0 items-center justify-center border border-current/25 px-2 text-[11px] uppercase tracking-[0.12em] transition-colors hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4"
         >
             {nextLanguage.toUpperCase()}

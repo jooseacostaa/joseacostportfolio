@@ -2,12 +2,11 @@
 
 import { LocalizedText, LanguageSwitch } from "@/components/layout/LanguageProvider";
 
-
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import GradientWaves from "@/components/ui/GradientWaves/GradientWaves";
+import PortfolioBackground from "@/components/ui/PortfolioBackground";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,29 +83,7 @@ const Hero = () => {
             className="relative min-h-screen w-full overflow-hidden px-6 py-6 md:px-8 md:py-8"
         >
             {/* Gradient Waves background */}
-            <div className="absolute inset-0 z-0">
-                <GradientWaves
-                    horizonColor="#050505"
-                    waveColor="#181818"
-                    crestColor="#FFFFFF"
-                    speed={0.25}
-                    amplitude={2.2}
-                    waveScale={0.6}
-                    waveRatio={2.5}
-                    swell={30}
-                    turbulence={35}
-                    tilt={1}
-                    zoom={1.1}
-                    height={7}
-                    fogDepth={16}
-                    detail="medium"
-                    brightness={0.1}
-                    opacity={1}
-                    mouseInteraction
-                    parallaxStrength={0.35}
-                    grain={false}
-                />
-            </div>
+            <PortfolioBackground />
 
             {/* Navigation */}
             <nav className="absolute top-6 left-6 right-6 z-10 flex flex-wrap items-center justify-between gap-y-2 text-[11px] uppercase tracking-[0.12em] md:top-8 md:left-8 md:right-8">
@@ -119,7 +96,7 @@ const Hero = () => {
                         href="#work"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="Work" es="Proyectos" />
+                        <LocalizedText id="nav.work" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -128,7 +105,7 @@ const Hero = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="About" es="Sobre mí" />
+                        <LocalizedText id="nav.about" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -137,7 +114,7 @@ const Hero = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="Contact" es="Contacto" />
+                        <LocalizedText id="nav.contact" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -166,7 +143,7 @@ const Hero = () => {
                 className="absolute bottom-[12%] left-[5%] right-[5%] z-10 max-w-xl"
             >
                 <p className="font-instrument mb-8 max-w-xl text-2xl leading-[1.1] tracking-[-0.02em] md:text-3xl">
-                    <LocalizedText en="Hi, I’m José, a software developer based in Spain. I build digital experiences through code, design, and interaction, bringing together a passion for technology, a strong eye for detail, and a curiosity for experimenting with new ideas." es="Hola, soy José, desarrollador de software en España. Creo experiencias digitales a través del código, el diseño y la interacción, combinando mi pasión por la tecnología, la atención al detalle y la curiosidad por experimentar con nuevas ideas." />
+                    <LocalizedText id="hero.intro" />
                 </p>
 
                 <div className="flex gap-8 text-sm italic uppercase tracking-[0.12em]">
@@ -207,7 +184,7 @@ const Hero = () => {
 
             {/* Scroll */}
             <span className="absolute bottom-6 right-6 z-10 text-[11px] uppercase tracking-[0.12em] md:bottom-8 md:right-8">
-                <LocalizedText en="Scroll ↓" es="Desliza ↓" />
+                <LocalizedText id="hero.scroll" />
             </span>
         </section>
     );

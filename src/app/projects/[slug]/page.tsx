@@ -1,3 +1,4 @@
+import { dictionaries } from "@/i18n";
 import { LocalizedText, LanguageSwitch } from "@/components/layout/LanguageProvider";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -48,7 +49,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                         href="/#work"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="Back to work" es="Volver a proyectos" />
+                        <LocalizedText id="project.back" />
 
                         <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </Link>
@@ -78,17 +79,17 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
 
                             {/* Title */}
                             <h1 className="font-instrument text-[clamp(5rem,10vw,10rem)] leading-[0.72] tracking-[-0.05em]">
-                                <LocalizedText en={project.title} es={project.titleEs} />
+                                <LocalizedText id={project.titleKey} />
                             </h1>
 
                             {/* Description */}
                             <div className="mt-12">
                                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                                    <LocalizedText en="About" es="Sobre el proyecto" />
+                                    <LocalizedText id="project.about" />
                                 </span>
 
                                 <p className="font-instrument mt-5 max-w-xl text-2xl leading-[1.05] tracking-[-0.02em] md:text-3xl">
-                                    <LocalizedText en={project.description} es={project.descriptionEs} />
+                                    <LocalizedText id={project.descriptionKey} />
                                 </p>
                             </div>
 
@@ -100,7 +101,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             {/* Technologies */}
                             <div>
                                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                                    <LocalizedText en="Technologies" es="Tecnologías" />
+                                    <LocalizedText id="project.technologies" />
                                 </span>
 
                                 <p className="mt-4 max-w-sm text-[11px] uppercase leading-relaxed tracking-[0.12em]">
@@ -112,7 +113,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             {project.url && (
                                 <div className="flex flex-col gap-4">
                                     <span className="text-[11px] uppercase tracking-[0.12em]">
-                                        <LocalizedText en="Website" es="Sitio web" />
+                                        <LocalizedText id="project.website" />
                                     </span>
 
                                     <a
@@ -121,7 +122,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                                         rel="noopener noreferrer"
                                         className="group relative inline-block w-fit text-[11px] uppercase tracking-[0.12em]"
                                     >
-                                        <LocalizedText en="Visit website ↗" es="Visitar sitio web ↗" />
+                                        <LocalizedText id="project.visit" />
 
                                         <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                                     </a>
@@ -135,7 +136,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                     <div className="relative h-[45vh] w-full shrink-0 overflow-hidden rounded-[8px] md:h-[75vh] md:w-[48%] lg:w-[45%]">
                         <Image
                             src={project.image}
-                            alt={project.title}
+                            alt={dictionaries.en[project.titleKey]}
                             fill
                             priority
                             sizes="(max-width: 768px) 100vw, 45vw"

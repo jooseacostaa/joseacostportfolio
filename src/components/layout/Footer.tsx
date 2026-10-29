@@ -2,7 +2,6 @@
 
 import { LocalizedText } from "@/components/layout/LanguageProvider";
 
-
 const Footer = () => {
     const handleBackToTop = () => {
         window.scrollTo({
@@ -26,7 +25,7 @@ const Footer = () => {
                         href="#work"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="Work" es="Proyectos" />
+                        <LocalizedText id="nav.work" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -35,7 +34,7 @@ const Footer = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="About" es="Sobre mí" />
+                        <LocalizedText id="nav.about" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -44,7 +43,7 @@ const Footer = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        <LocalizedText en="Contact" es="Contacto" />
+                        <LocalizedText id="nav.contact" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -56,7 +55,7 @@ const Footer = () => {
                     onClick={handleBackToTop}
                     className="group relative inline-block"
                 >
-                    <LocalizedText en="Back to top ↑" es="Volver arriba ↑" />
+                    <LocalizedText id="footer.backToTop" />
 
                     <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                 </button>
