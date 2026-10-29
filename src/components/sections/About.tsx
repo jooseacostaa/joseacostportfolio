@@ -1,5 +1,8 @@
 "use client";
 
+import { LocalizedText } from "@/components/layout/LanguageProvider";
+
+
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -164,11 +167,11 @@ const About = () => {
                 className="mb-20 flex items-end justify-between"
             >
                 <h2 className="font-instrument text-6xl tracking-[-0.04em] md:text-9xl">
-                    About
+                    <LocalizedText en="About" es="Sobre mí" />
                 </h2>
 
                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                    Contact me
+                    <LocalizedText en="Contact me" es="Hablemos" />
                 </span>
             </div>
 
@@ -183,30 +186,27 @@ const About = () => {
                     className="flex flex-col justify-between"
                 >
                     <p className="font-instrument max-w-4xl text-4xl leading-[0.95] tracking-[-0.035em] md:text-6xl">
-                        I’m interested in the space where technology meets creativity. I enjoy
-                        taking ideas apart, understanding how they work, and rebuilding them
-                        into something simple, thoughtful and alive. I’m always curious about
-                        what can be done next.
+                        <LocalizedText en="I’m interested in the space where technology meets creativity. I enjoy taking ideas apart, understanding how they work, and rebuilding them into something simple, thoughtful and alive. I’m always curious about what can be done next." es="Me interesa el punto de encuentro entre la tecnología y la creatividad. Disfruto descomponiendo ideas, entendiendo cómo funcionan y reconstruyéndolas para crear algo sencillo, cuidado y con vida. Siempre tengo curiosidad por descubrir qué más se puede hacer." />
                     </p>
 
                     <div className="mt-16 flex gap-16 md:mt-24">
                         <div className="about-detail">
                             <span className="mb-2 block text-[11px] uppercase tracking-[0.12em]">
-                                Based in
+                                <LocalizedText en="Based in" es="Ubicación" />
                             </span>
 
                             <p className="text-xs uppercase tracking-[0.08em]">
-                                Canary Islands, Spain
+                                <LocalizedText en="Canary Islands, Spain" es="Islas Canarias, España" />
                             </p>
                         </div>
 
                         <div className="about-detail">
                             <span className="mb-2 block text-[11px] uppercase tracking-[0.12em]">
-                                Role
+                                <LocalizedText en="Role" es="Perfil" />
                             </span>
 
                             <p className="text-xs uppercase tracking-[0.08em]">
-                                Software Developer
+                                <LocalizedText en="Software Developer" es="Desarrollador de software" />
                             </p>
                         </div>
                     </div>
@@ -221,7 +221,7 @@ const About = () => {
                         href="mailto:joseacostanaranjo@hotmail.com"
                         className="about-action flex h-14 items-center justify-between bg-black px-6 text-[11px] uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-transparent hover:text-black"
                     >
-                        <span>Mail me</span>
+                        <span><LocalizedText en="Mail me" es="Escríbeme" /></span>
                         <span>↗</span>
                     </a>
 
@@ -229,7 +229,7 @@ const About = () => {
                         href="tel:+34620463759"
                         className="about-action flex h-14 items-center justify-between bg-black px-6 text-[11px] uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-transparent hover:text-black"
                     >
-                        <span>Call me</span>
+                        <span><LocalizedText en="Call me" es="Llámame" /></span>
                         <span>↗</span>
                     </a>
 
@@ -248,7 +248,7 @@ const About = () => {
                         onClick={() => setSkillsOpen(true)}
                         className="about-action mt-2 flex h-24 items-center justify-between bg-black px-6 text-[11px] uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-transparent hover:text-black"
                     >
-                        <span>Skills</span>
+                        <span><LocalizedText en="Skills" es="Habilidades" /></span>
                         <span className="text-lg">↗</span>
                     </button>
                 </div>

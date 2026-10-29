@@ -1,3 +1,4 @@
+import { LanguageProvider } from "@/components/layout/LanguageProvider";
 import type { Metadata } from "next";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -16,9 +17,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="es">
+        <html lang="en">
             <body>
-                <PageTransition>{children}</PageTransition>
+                <LanguageProvider>
+                    <PageTransition>{children}</PageTransition>
+                </LanguageProvider>
                 <Analytics />
             </body>
         </html>

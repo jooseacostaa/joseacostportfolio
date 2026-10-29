@@ -1,5 +1,8 @@
 "use client";
 
+import { LocalizedText, LanguageSwitch } from "@/components/layout/LanguageProvider";
+
+
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -106,17 +109,17 @@ const Hero = () => {
             </div>
 
             {/* Navigation */}
-            <nav className="absolute top-6 left-6 right-6 z-10 flex items-center justify-between text-[11px] uppercase tracking-[0.12em] md:top-8 md:left-8 md:right-8">
+            <nav className="absolute top-6 left-6 right-6 z-10 flex flex-wrap items-center justify-between gap-y-2 text-[11px] uppercase tracking-[0.12em] md:top-8 md:left-8 md:right-8">
                 <span>
                     José Acosta
                 </span>
 
-                <div className="flex gap-6">
+                <div className="ml-auto flex items-center gap-2 sm:gap-6">
                     <a
                         href="#work"
                         className="group relative inline-block"
                     >
-                        Work
+                        <LocalizedText en="Work" es="Proyectos" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -125,7 +128,7 @@ const Hero = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        About
+                        <LocalizedText en="About" es="Sobre mí" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -134,10 +137,11 @@ const Hero = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        Contact
+                        <LocalizedText en="Contact" es="Contacto" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
+                    <LanguageSwitch />
                 </div>
             </nav>
 
@@ -159,13 +163,10 @@ const Hero = () => {
             {/* About + social links */}
             <div
                 ref={aboutRef}
-                className="absolute bottom-[12%] left-[5%] z-10 max-w-xl"
+                className="absolute bottom-[12%] left-[5%] right-[5%] z-10 max-w-xl"
             >
                 <p className="font-instrument mb-8 max-w-xl text-2xl leading-[1.1] tracking-[-0.02em] md:text-3xl">
-                    Hi, I’m José, a software developer based in Spain. I build digital
-                    experiences through code, design, and interaction, bringing together
-                    a passion for technology, a strong eye for detail, and a curiosity
-                    for experimenting with new ideas.
+                    <LocalizedText en="Hi, I’m José, a software developer based in Spain. I build digital experiences through code, design, and interaction, bringing together a passion for technology, a strong eye for detail, and a curiosity for experimenting with new ideas." es="Hola, soy José, desarrollador de software en España. Creo experiencias digitales a través del código, el diseño y la interacción, combinando mi pasión por la tecnología, la atención al detalle y la curiosidad por experimentar con nuevas ideas." />
                 </p>
 
                 <div className="flex gap-8 text-sm italic uppercase tracking-[0.12em]">
@@ -206,7 +207,7 @@ const Hero = () => {
 
             {/* Scroll */}
             <span className="absolute bottom-6 right-6 z-10 text-[11px] uppercase tracking-[0.12em] md:bottom-8 md:right-8">
-                Scroll ↓
+                <LocalizedText en="Scroll ↓" es="Desliza ↓" />
             </span>
         </section>
     );

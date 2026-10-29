@@ -1,5 +1,8 @@
 "use client";
 
+import { LocalizedText, useLanguage } from "@/components/layout/LanguageProvider";
+
+
 import {
     useCallback,
     useEffect,
@@ -17,6 +20,7 @@ const SkillsPanel = ({
     open,
     onClose,
 }: SkillsPanelProps) => {
+    const language = useLanguage();
     const panelRef = useRef<HTMLElement>(null);
     const backdropRef = useRef<HTMLDivElement>(null);
     const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -299,17 +303,17 @@ const SkillsPanel = ({
                         id="skills-title"
                         className="text-[11px] uppercase tracking-[0.12em]"
                     >
-                        Skills
+                        <LocalizedText en="Skills" es="Habilidades" />
                     </span>
 
                     <button
                         ref={closeButtonRef}
                         type="button"
                         onClick={handleClose}
-                        aria-label="Close skills panel"
+                        aria-label={language === "es" ? "Cerrar panel de habilidades" : "Close skills panel"}
                         className="skills-close text-[11px] uppercase tracking-[0.12em]"
                     >
-                        Close
+                        <LocalizedText en="Close" es="Cerrar" />
                     </button>
                 </div>
 
@@ -318,14 +322,14 @@ const SkillsPanel = ({
                     className="min-h-0 flex-1 overflow-y-auto"
                     tabIndex={0}
                     role="region"
-                    aria-label="Skills list"
+                    aria-label={language === "es" ? "Lista de habilidades" : "Skills list"}
                 >
                     <div className="my-auto">
 
                         {/* Development */}
                         <div className="skills-category border-t border-white/20 py-8">
                             <span className="mb-5 block text-[11px] uppercase tracking-[0.12em] text-white/50">
-                                Development
+                                <LocalizedText en="Development" es="Desarrollo" />
                             </span>
 
                             <div className="skills-technologies font-instrument text-4xl leading-none tracking-[-0.03em] md:text-5xl">
@@ -351,7 +355,7 @@ const SkillsPanel = ({
                         {/* Databases */}
                         <div className="skills-category border-t border-white/20 py-8">
                             <span className="mb-5 block text-[11px] uppercase tracking-[0.12em] text-white/50">
-                                Databases
+                                <LocalizedText en="Databases" es="Bases de datos" />
                             </span>
 
                             <p className="skills-technologies text-sm uppercase tracking-[0.08em]">
@@ -362,7 +366,7 @@ const SkillsPanel = ({
                         {/* Tools */}
                         <div className="skills-category border-t border-white/20 py-8">
                             <span className="mb-5 block text-[11px] uppercase tracking-[0.12em] text-white/50">
-                                Tools
+                                <LocalizedText en="Tools" es="Herramientas" />
                             </span>
 
                             <p className="skills-technologies text-sm uppercase tracking-[0.08em]">

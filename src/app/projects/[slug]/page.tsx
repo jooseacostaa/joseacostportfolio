@@ -1,3 +1,4 @@
+import { LocalizedText, LanguageSwitch } from "@/components/layout/LanguageProvider";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,14 +43,17 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                         <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </Link>
 
+                    <div className="flex items-center gap-4 md:gap-6">
                     <Link
                         href="/#work"
                         className="group relative inline-block"
                     >
-                        Back to work
+                        <LocalizedText en="Back to work" es="Volver a proyectos" />
 
                         <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </Link>
+                    <LanguageSwitch />
+                    </div>
                 </header>
 
                 {/* Project */}
@@ -74,17 +78,17 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
 
                             {/* Title */}
                             <h1 className="font-instrument text-[clamp(5rem,10vw,10rem)] leading-[0.72] tracking-[-0.05em]">
-                                {project.title}
+                                <LocalizedText en={project.title} es={project.titleEs} />
                             </h1>
 
                             {/* Description */}
                             <div className="mt-12">
                                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                                    About
+                                    <LocalizedText en="About" es="Sobre el proyecto" />
                                 </span>
 
                                 <p className="font-instrument mt-5 max-w-xl text-2xl leading-[1.05] tracking-[-0.02em] md:text-3xl">
-                                    {project.description}
+                                    <LocalizedText en={project.description} es={project.descriptionEs} />
                                 </p>
                             </div>
 
@@ -96,7 +100,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             {/* Technologies */}
                             <div>
                                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                                    Technologies
+                                    <LocalizedText en="Technologies" es="Tecnologías" />
                                 </span>
 
                                 <p className="mt-4 max-w-sm text-[11px] uppercase leading-relaxed tracking-[0.12em]">
@@ -108,7 +112,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             {project.url && (
                                 <div className="flex flex-col gap-4">
                                     <span className="text-[11px] uppercase tracking-[0.12em]">
-                                        Website
+                                        <LocalizedText en="Website" es="Sitio web" />
                                     </span>
 
                                     <a
@@ -117,7 +121,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                                         rel="noopener noreferrer"
                                         className="group relative inline-block w-fit text-[11px] uppercase tracking-[0.12em]"
                                     >
-                                        Visit website ↗
+                                        <LocalizedText en="Visit website ↗" es="Visitar sitio web ↗" />
 
                                         <span className="absolute bottom-[-4px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                                     </a>

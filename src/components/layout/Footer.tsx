@@ -1,5 +1,8 @@
 "use client";
 
+import { LocalizedText } from "@/components/layout/LanguageProvider";
+
+
 const Footer = () => {
     const handleBackToTop = () => {
         window.scrollTo({
@@ -23,7 +26,7 @@ const Footer = () => {
                         href="#work"
                         className="group relative inline-block"
                     >
-                        Work
+                        <LocalizedText en="Work" es="Proyectos" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -32,7 +35,7 @@ const Footer = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        About
+                        <LocalizedText en="About" es="Sobre mí" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -41,7 +44,7 @@ const Footer = () => {
                         href="#about"
                         className="group relative inline-block"
                     >
-                        Contact
+                        <LocalizedText en="Contact" es="Contacto" />
 
                         <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                     </a>
@@ -53,7 +56,7 @@ const Footer = () => {
                     onClick={handleBackToTop}
                     className="group relative inline-block"
                 >
-                    Back to top ↑
+                    <LocalizedText en="Back to top ↑" es="Volver arriba ↑" />
 
                     <span className="absolute bottom-[-3px] left-1/2 h-px w-0 -translate-x-1/2 bg-current transition-all duration-300 group-hover:w-full" />
                 </button>

@@ -1,5 +1,8 @@
 "use client";
 
+import { LocalizedText } from "@/components/layout/LanguageProvider";
+
+
 import { useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -217,11 +220,11 @@ const Projects = () => {
                 className="mb-20 flex items-end justify-between"
             >
                 <h2 className="font-instrument text-6xl tracking-[-0.04em] md:text-9xl">
-                    Work
+                    <LocalizedText en="Work" es="Proyectos" />
                 </h2>
 
                 <span className="text-[11px] uppercase tracking-[0.12em]">
-                    Selected projects
+                    <LocalizedText en="Selected projects" es="Proyectos seleccionados" />
                 </span>
             </div>
 
@@ -258,7 +261,7 @@ const Projects = () => {
                             {/* Project information */}
                             <div>
                                 <h3 className="italic text-4xl leading-none tracking-[-0.03em] transition-transform duration-500 ease-out group-hover:translate-x-3 md:text-6xl">
-                                    {project.title}
+                                    <LocalizedText en={project.title} es={project.titleEs} />
                                 </h3>
 
                                 <p className="mt-3 text-xs uppercase tracking-[0.1em]">
@@ -268,7 +271,7 @@ const Projects = () => {
 
                             {/* Description */}
                             <span className="hidden text-xs uppercase tracking-[0.1em] md:block">
-                                {project.description}
+                                <LocalizedText en={project.description} es={project.descriptionEs} />
                             </span>
 
                             {/* Year */}
