@@ -7,7 +7,7 @@ const es = {
     "hero.intro": "Hola, soy José, desarrollador de software en España. Creo experiencias digitales a través del código, el diseño y la interacción, combinando mi pasión por la tecnología, la atención al detalle y la curiosidad por experimentar con nuevas ideas.",
     "hero.scroll": "Desliza ↓",
     "about.contact": "Hablemos",
-    "about.intro": "Me interesa el punto de encuentro entre la tecnología y la creatividad. Disfruto descomponiendo ideas, entendiendo cómo funcionan y reconstruyéndolas para crear algo sencillo, cuidado y con vida. Siempre tengo curiosidad por descubrir qué más se puede hacer.",
+    "about.intro": "Me gusta entender cómo funcionan las cosas y encontrar la forma de hacerlas mejor. Disfruto creando aplicaciones y páginas web, desde la lógica que hay detrás hasta los detalles que se ven y se sienten al usarlas. Cada proyecto es una oportunidad para aprender, probar ideas y construir algo que resulte útil y agradable de usar.",
     "about.locationLabel": "Ubicación",
     "about.location": "Islas Canarias, España",
     "about.roleLabel": "Perfil",
