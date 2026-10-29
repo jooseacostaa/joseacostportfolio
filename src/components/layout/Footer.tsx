@@ -38,7 +38,7 @@ const Footer = () => {
                     </a>
 
                     <a
-                        href="#contact"
+                        href="#about"
                         className="group relative inline-block"
                     >
                         Contact

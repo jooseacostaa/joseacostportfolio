@@ -167,6 +167,19 @@ const Projects = () => {
         event: React.MouseEvent<HTMLAnchorElement>,
         slug: string
     ) => {
+        if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey ||
+            event.currentTarget.hasAttribute("download") ||
+            (event.currentTarget.target && event.currentTarget.target !== "_self")
+        ) {
+            return;
+        }
+
         event.preventDefault();
 
         const project = projects.find(

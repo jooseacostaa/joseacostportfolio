@@ -389,7 +389,21 @@ const GradientWaves: React.FC<GradientWavesProps> = ({
     const enableMouseRef =
         useRef(mouseInteraction);
 
+    // Create the renderer once; the following effect updates its uniforms.
+    const initialConfig = useRef({
+        horizonColor, waveColor, crestColor, speed, amplitude, waveScale,
+        waveRatio, swell, turbulence, tilt, zoom, height, fogDepth, detail,
+        brightness, opacity, mouseInteraction, parallaxStrength, grain,
+        grainIntensity,
+    });
+
     useEffect(() => {
+        const {
+            horizonColor, waveColor, crestColor, speed, amplitude, waveScale,
+            waveRatio, swell, turbulence, tilt, zoom, height, fogDepth, detail,
+            brightness, opacity, mouseInteraction, parallaxStrength, grain,
+            grainIntensity,
+        } = initialConfig.current;
 
         const container =
             containerRef.current;
@@ -840,7 +854,7 @@ const GradientWaves: React.FC<GradientWavesProps> = ({
         const uniforms =
             program.uniforms as Record<
                 string,
-                { value: any }
+                { value: number | boolean | Float32Array }
             >;
 
         enableMouseRef.current =

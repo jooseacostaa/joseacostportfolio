@@ -162,7 +162,7 @@ const Hero = () => {
                 className="absolute bottom-[12%] left-[5%] z-10 max-w-xl"
             >
                 <p className="font-instrument mb-8 max-w-xl text-2xl leading-[1.1] tracking-[-0.02em] md:text-3xl">
-                    Hi, I'm José, a software developer based in Spain. I build digital
+                    Hi, I’m José, a software developer based in Spain. I build digital
                     experiences through code, design, and interaction, bringing together
                     a passion for technology, a strong eye for detail, and a curiosity
                     for experimenting with new ideas.
